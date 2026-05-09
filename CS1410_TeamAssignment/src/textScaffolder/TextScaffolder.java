@@ -152,13 +152,13 @@ public class TextScaffolder extends JFrame {
 					//Component[] components = textLineBody.getComponents();
 					for(Component c : lineComponents) {
 						if (c instanceof JTextField) {
-							writeToFile(((JTextField) c).getText(), "src\\TextScaffolder\\FilledTextStructure.txt"); // writes the contents of the component to the file
+							writeToFile(((JTextField) c).getText(), "src\\TextScaffolder\\FilledTextStructure.txt", true); // writes the contents of the component to the file
 						}
 						if (c instanceof JLabel) {
-							writeToFile(((JLabel) c).getText(), "src\\TextScaffolder\\FilledTextStructure.txt");
+							writeToFile(((JLabel) c).getText(), "src\\TextScaffolder\\FilledTextStructure.txt", true);
 						}
 					}
-					writeToFile("\n", "src\\TextScaffolder\\FilledTextStructure.txt");
+					writeToFile("\n", "src\\TextScaffolder\\FilledTextStructure.txt", true);
 				}
 			});
 			textLineBody.add(btnSubmitText);
@@ -244,17 +244,26 @@ public class TextScaffolder extends JFrame {
 		
 	}
 
-	static void writeToFile(String text, String fileName) {
+	static void writeToFile(String text, String fileName, Boolean append) {
 		//String fileName = "src\\TextScaffolder\\FilledTextStructure.txt";
 		
-		// solution for appending successfully: https://stackoverflow.com/questions/9961292/write-to-text-file-without-overwriting-in-java
-		// new FileWriter(fileName, true))
-		try(PrintWriter writer = new PrintWriter(fileName)){
-			writer.write(text);
-			//System.out.print(text);
+		if (!append) {
+			try(PrintWriter writer = new PrintWriter(fileName)){
+				writer.write(text);
+				//System.out.print(text);
+			}
+			catch(Exception e) {
+				System.out.print("huh. " + e);
+			}
 		}
-		catch(Exception e) {
-			System.out.print("huh. " + e);
+		else if(append) { // solution for appending successfully: https://stackoverflow.com/questions/9961292/write-to-text-file-without-overwriting-in-java
+			try(PrintWriter writer = new PrintWriter(new FileWriter(fileName, true))){
+				writer.append(text);
+				//System.out.print(text);
+			}
+			catch(Exception e) {
+				System.out.print("huh. " + e);
+			}
 		}
 	}
 }

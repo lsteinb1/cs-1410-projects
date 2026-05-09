@@ -125,7 +125,7 @@ public class TextStructureGenerator extends JFrame {
 				public void actionPerformed(ActionEvent arg0) {
 					textStructure = new TextStructure(structureNameTextField.getText(), structureDescTextField.getText(), structureFillableTextField.getText(),
 							structureFillableSlotMarkField.getText(), structureIteratorMarkField.getText(), Integer.parseInt(structureNumberOfTextLinesField.getText()));
-					TextScaffolder.writeToFile(textStructure.toString(), "src\\TextScaffolder\\TextStructure2.txt");
+					TextScaffolder.writeToFile(textStructure.toString(), "src\\TextScaffolder\\TextStructure2.txt", false);
 				}
 			});
 			structurePanel.add(btnSubmitStructureText);

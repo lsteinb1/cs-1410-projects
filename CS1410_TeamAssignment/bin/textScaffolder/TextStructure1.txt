@@ -2,12 +2,4 @@ Word Set
 For adding Word Sets to JapaneseQuizGenerator
 *
 ^
-q11.wl[^] = Word("*", "*", "*", "*", [], [])Word Set
-For adding Word Sets to JapaneseQuizGenerator
-*
-^
-q11.wl[^] = Word("*", "*", "*", "*", [], [])Word Set
-For adding Word Sets to JapaneseQuizGenerator
-*
-^
 q11.wl[^] = Word("*", "*", "*", "*", [], [])
