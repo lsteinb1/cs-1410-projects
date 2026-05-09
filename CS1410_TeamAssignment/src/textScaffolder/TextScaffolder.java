@@ -61,7 +61,6 @@ public class TextScaffolder extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
-		//textStructure = newTextStructure();
 		textStructure = importTextStructure("src\\TextScaffolder\\TextStructure1.txt");
 		
 		initializeTextLinesAndTitle();
@@ -164,18 +163,6 @@ public class TextScaffolder extends JFrame {
 			textLineBody.add(btnSubmitText);
 		}
 	}
-	
-	/*
-	private TextStructure newTextStructure() {
-		List<String> structureTemplate = new ArrayList<>();
-		Collections.addAll(structureTemplate, "q11.wl[^] = Word(\"", "*", "\", \"", "*", "\", \"", "*", "\", \"", "*", "\", [], [])");
-		TextStructure textStructure1 = new TextStructure("Word Set", "For adding Word Sets to JapaneseQuizGenerator", structureTemplate, "*", "^", 5);
-		
-		writeToFile(textStructure1.toString(), "src\\TextScaffolder\\TextStructure1.txt");
-		
-		return textStructure1;
-	}
-	*/
 	
 	/**
 	 * Format:
