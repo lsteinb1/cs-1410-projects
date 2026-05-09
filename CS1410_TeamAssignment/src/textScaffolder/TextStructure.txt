@@ -1,0 +1,7 @@
+Characters
+For generating a list of traits about characters.
+*
+^
+character ^: *, *, *
+3
+1

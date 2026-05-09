@@ -1,1 +1,5 @@
-q11.wl[0] = Word("a", "b", "c", "d", [], [])
+q11.wl[0] = Word("I", "watashi", "わたし", "私", [], [])
+q11.wl[1] = Word("you", "anata", "あなた", "貴方", [], [])
+character 1: Aster, Lucenari, 23
+character 2: Tune, Penumbran, 22
+character 3: Mira, Lucenari, 13

@@ -9,6 +9,12 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+/**
+ * Creates a line of text (fixed components; JLabels) and fillable fields (dynamic components; JTextFields) based on a TextStructure.
+ * 
+ * @author Lydia
+ * 
+ */
 public class TextLine {
 	private TextStructure textStructure;
 	private JPanel hostPanel;
@@ -29,6 +35,13 @@ public class TextLine {
 		this.iteratorMark = textStructure.getIteratorMark();
 	}
 	
+	/**
+	 * Creates a TextLine based on the TextStructure, with fillable Text Fields replacing each fillableSlotMark, an iterator replacing any iteratorMark,
+	 * and Labels for any text that isn't one of those things.
+	 * 
+	 * @param iterator - a variable that will update for each line created (in the method the lines are created in), if creating multiple lines and using an iterator.
+	 * @return a List<Component> with all the components that were initialized within createLine, for easy access.
+	 */
 	public List<Component> createLine(int iterator) {
 		List<Component> lineComponents = new ArrayList<>();
 		
@@ -54,5 +67,12 @@ public class TextLine {
 		}
 		
 		return lineComponents;
+	}
+
+	/**
+	 * @return the textStructure
+	 */
+	public TextStructure getTextStructure() {
+		return textStructure;
 	}
 }
