@@ -1,0 +1,1 @@
+The final assignment is the TeamAssignment, which I actually had to do on my own. This project I called TextScaffolder, and it let the user define something like a form they could generate and fill in with unique information, then copy.
